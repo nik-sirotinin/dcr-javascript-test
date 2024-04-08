@@ -1,0 +1,59 @@
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DCR Javascript Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="data.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Country Data Visualiser
+      </h1>
+      <p class="subtitle">
+        Select a country or region plot and we'll show you the data!
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <form data-plot-choice-form>
+
+    <div class="field ">
+      <div class="control">
+        <label class="label">By Country</label>
+        <label class="radio"><input type="radio" name="plot-choice"value="population-by-country">Population size</label>
+        <label class="radio"><input type="radio" name="plot-choice"value="borders-by-country">Number of borders</label>
+        <label class="radio"><input type="radio" name="plot-choice"value="timezones-by-country">Number of timezones</label>
+        <label class="radio"><input type="radio" name="plot-choice"value="languages-by-country">Number of languages</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <label class="label">By Region</label>
+        <label class="radio"><input type="radio" name="plot-choice"value="countries-by-region">Number of coutries</label>
+        <label class="radio"><input type="radio" name="plot-choice"value="timezones-by-region">Number of unique timezones</label>
+      </div>
+    </div> 
+
+    <div class="field">
+      <div class="control">
+        <button class="button is-primary" type="submit" disabled>Plot it</button>
+      </div>
+    </div>
+    </form>
+
+
+    <div class="card">
+      <div class="card-image" >
+        <figure class="image is4by3" data-plot-container>
+        </figure>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
